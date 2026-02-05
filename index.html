@@ -25,6 +25,9 @@
     <meta property="twitter:description" content="Especialistas em Direito Civil, Digital e LGPD. Soluções jurídicas modernas e personalizadas.">
     <meta property="twitter:image" content="https://www.oliveiramattos.adv.br/logo-social.png">
 
+    <!-- Font Awesome para ícones das redes sociais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -484,15 +487,26 @@
         }
 
         .social-icon {
-            font-size: 28px;
+            font-size: 32px;
             text-decoration: none;
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            opacity: 0.9;
+            transition: transform 0.3s ease, color 0.3s ease;
+            color: white;
         }
 
         .social-icon:hover {
             transform: scale(1.2);
-            opacity: 1;
+        }
+
+        .social-icon .fa-linkedin:hover {
+            color: #0077b5;
+        }
+
+        .social-icon .fa-instagram:hover {
+            color: #E4405F;
+        }
+
+        .social-icon .fa-facebook:hover {
+            color: #1877f2;
         }
 
         /* WhatsApp Button */
@@ -696,9 +710,15 @@
 
     <footer>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/luiz-felipe-de-o-mattos-67354423" target="_blank" title="LinkedIn" class="social-icon">🔗</a>
-            <a href="https://www.instagram.com/adv.luizmattos" target="_blank" title="Instagram" class="social-icon">📸</a>
-            <a href="https://www.facebook.com/share/18EbTnJmLe/" target="_blank" title="Facebook" class="social-icon">👥</a>
+            <a href="https://www.linkedin.com/in/luiz-felipe-de-o-mattos-67354423" target="_blank" title="LinkedIn" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/adv.luizmattos" target="_blank" title="Instagram" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/18EbTnJmLe/" target="_blank" title="Facebook" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
         </div>
         <p>&copy; 2026 Oliveira Mattos e Moraes e Silva Advogados Associados. Todos os direitos reservados.</p>
         <p>L. F. Oliveira Mattos Sociedade Individual de Advocacia</p>
