@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Oliveira Mattos e Moraes e Silva Advogados Associados | Direito Civil e Digital</title>
+    <meta name="description" content="Escritório de advocacia especializado em Direito Civil, Direito Digital e LGPD. Atendimento personalizado em São Paulo e todo o Brasil. L. F. Oliveira Mattos Sociedade Individual de Advocacia.">
+    <meta name="keywords" content="advogado direito civil, advogado direito digital, especialista LGPD, Oliveira Mattos e Moraes e Silva, advocacia São Paulo, proteção de dados pessoais, direito empresarial">
+    <meta name="author" content="Luiz Felipe Oliveira Mattos">
+    <link rel="canonical" href="https://www.oliveiramattos.adv.br">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.oliveiramattos.adv.br">
+    <meta property="og:title" content="Oliveira Mattos e Moraes e Silva Advogados Associados">
+    <meta property="og:description" content="Especialistas em Direito Civil, Digital e LGPD. Soluções jurídicas modernas e personalizadas.">
+    <meta property="og:image" content="https://www.oliveiramattos.adv.br/logo-social.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.oliveiramattos.adv.br">
+    <meta property="twitter:title" content="Oliveira Mattos e Moraes e Silva Advogados Associados">
+    <meta property="twitter:description" content="Especialistas em Direito Civil, Digital e LGPD. Soluções jurídicas modernas e personalizadas.">
+    <meta property="twitter:image" content="https://www.oliveiramattos.adv.br/logo-social.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header e Navegação */
+        header {
+            background: linear-gradient(135deg, #003d7a 0%, #004a94 100%);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            line-height: 1.2;
+        }
+
+        .logo-text .main {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .logo-text .sub {
+            font-size: 12px;
+            color: #d4af37;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #d4af37;
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #003d7a 0%, #004a94 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #d4af37;
+            color: #003d7a;
+        }
+
+        .btn-primary:hover {
+            background-color: #e6c547;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #003d7a;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 20px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            color: #003d7a;
+            margin-bottom: 15px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #d4af37, transparent);
+        }
+
+        section p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 16px;
+        }
+
+        /* Sobre */
+        .about {
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .about-text h3 {
+            color: #003d7a;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            text-align: left;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .about-highlight {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-left: 4px solid #d4af37;
+            margin: 20px 0;
+            border-radius: 3px;
+        }
+
+        /* Áreas de Atuação */
+        .areas {
+            background-color: #f9f9f9;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .area-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid #d4af37;
+        }
+
+        .area-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .area-card h3 {
+            color: #003d7a;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .area-card p {
+            text-align: left;
+            color: #666;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Blog */
+        .blog {
+            background-color: white;
+        }
+
+        .blog-post {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 8px;
+            margin-top: 40px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .blog-post h3 {
+            color: #003d7a;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .blog-meta {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .blog-content {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .blog-content p {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .blog-content h4 {
+            color: #003d7a;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .blog-content ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .blog-content li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        /* Contato */
+        .contact {
+            background-color: #f9f9f9;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h3 {
+            color: #003d7a;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-item strong {
+            color: #003d7a;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #003d7a;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Calibri', sans-serif;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: #003d7a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-text">
+                    <div class="main">OLIVEIRA MATTOS E MORAES E SILVA</div>
+                    <div class="sub">ADVOGADOS ASSOCIADOS</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#areas">Áreas</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Excelência Jurídica na Era Digital</h1>
+            <p>Especialistas em Direito Civil, Direito Digital e LGPD. Protegendo seus interesses com modernidade e ética.</p>
+            <div class="hero-buttons">
+                <a href="#contato" class="btn btn-primary">Falar com um Especialista</a>
+                <a href="#areas" class="btn btn-secondary">Nossas Áreas</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="sobre" class="about">
+            <h2>Sobre o Escritório</h2>
+            <p>Conheça nossa história e compromisso com a advocacia de alta performance.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Oliveira Mattos e Moraes e Silva</h3>
+                    <p>Fundado pelo Dr. Luiz Felipe Oliveira Mattos, nosso escritório é referência em soluções jurídicas personalizadas, unindo a tradição do Direito Civil com a inovação do Direito Digital.</p>
+                    <p>Atuamos como <strong>L. F. Oliveira Mattos Sociedade Individual de Advocacia</strong>, focados em oferecer segurança jurídica em um mundo em constante transformação tecnológica.</p>
+                    <div class="about-highlight">
+                        "Nossa missão é antecipar riscos e oferecer soluções estratégicas que garantam a proteção de dados e a conformidade legal de nossos clientes."
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Nossos Valores</h3>
+                    <p><strong>Ética:</strong> Atuação pautada pela transparência e integridade.</p>
+                    <p><strong>Inovação:</strong> Domínio das novas tecnologias e seus impactos jurídicos.</p>
+                    <p><strong>Personalização:</strong> Cada cliente recebe uma estratégia única e dedicada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="areas" class="areas">
+            <h2>Áreas de Atuação</h2>
+            <p>Oferecemos suporte jurídico especializado em diversas frentes do Direito moderno.</p>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h3>Direito Digital</h3>
+                    <p>Consultoria em crimes cibernéticos, contratos eletrônicos, responsabilidade civil na internet e propriedade intelectual digital.</p>
+                </div>
+                <div class="area-card">
+                    <h3>LGPD e Privacidade</h3>
+                    <p>Implementação completa da Lei Geral de Proteção de Dados, auditorias de privacidade e treinamento para empresas.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Direito Civil</h3>
+                    <p>Contratos, responsabilidade civil, direito de família, sucessões e questões possessórias com foco estratégico.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Direito Empresarial</h3>
+                    <p>Assessoria jurídica para startups e empresas consolidadas, estruturação societária e compliance.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Direito Tributário</h3>
+                    <p>Planejamento tributário, defesa em processos administrativos e judiciais, e recuperação de créditos.</p>
+                </div>
+                <div class="area-card">
+                    <h3>Contencioso Estratégico</h3>
+                    <p>Representação em litígios complexos que exigem análise técnica profunda e abordagem personalizada.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog" class="blog">
+            <h2>Blog & Notícias</h2>
+            <p>Fique por dentro das principais atualizações do mundo jurídico.</p>
+            <div class="blog-post">
+                <div class="blog-meta">Publicado em 03 de Fevereiro de 2026 | Por Luiz Felipe</div>
+                <h3>A Importância da LGPD para Pequenas e Médias Empresas</h3>
+                <div class="blog-content">
+                    <p>Muitos empresários ainda acreditam que a Lei Geral de Proteção de Dados (LGPD) se aplica apenas a grandes corporações de tecnologia. No entanto, a realidade é bem diferente.</p>
+                    <h4>Por que se adequar agora?</h4>
+                    <ul>
+                        <li><strong>Segurança Jurídica:</strong> Evite multas pesadas da ANPD.</li>
+                        <li><strong>Confiança do Cliente:</strong> Demonstrar cuidado com dados é um diferencial competitivo.</li>
+                        <li><strong>Prevenção de Incidentes:</strong> Processos bem definidos reduzem o risco de vazamentos.</li>
+                    </ul>
+                    <p>A adequação não é apenas uma obrigação legal, mas uma estratégia de sobrevivência no mercado digital atual.</p>
+                </div>
+                <a href="#contato" class="btn btn-primary">Saiba mais sobre Adequação</a>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para uma consulta especializada.</p>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-item">
+                        <strong>Endereço</strong>
+                        São Paulo, SP - Atendimento em todo o Brasil
+                    </div>
+                    <div class="contact-item">
+                        <strong>E-mail</strong>
+                        <a href="mailto:contato@oliveiramattos.adv.br">contato@oliveiramattos.adv.br</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>WhatsApp</strong>
+                        <a href="https://wa.me/5511999999999" target="_blank">+55 (11) 99999-9999</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horário de Atendimento</strong>
+                        Segunda a Sexta: 09h às 18h
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xpwqzvda" method="POST">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="assunto" placeholder="Ex: Consultoria LGPD" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Oliveira Mattos e Moraes e Silva Advogados Associados. Todos os direitos reservados.</p>
+        <p>L. F. Oliveira Mattos Sociedade Individual de Advocacia</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <!-- Nota: Em um ambiente real, usaríamos um ícone do FontAwesome ou SVG -->
+        <span style="font-size: 12px; position: absolute; bottom: -20px; color: #333; width: 100px; text-align: center;">WhatsApp</span>
+    </a>
+</body>
+</html>
