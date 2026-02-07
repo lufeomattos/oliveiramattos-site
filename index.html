@@ -274,7 +274,78 @@
             border-radius: 3px;
         }
 
-        /* Áreas de Atuação */
+        /* Seção Sobre os Sócios */
+.socios {
+    background-color: #f0f0f0;
+}
+
+.socios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.socio-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.socio-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #d4af37;
+}
+
+.socio-info h3 {
+    color: #003d7a;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.socio-title {
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.socio-especialidades {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.socio-bio p {
+    text-align: justify;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.socio-social {
+    margin-top: 20px;
+}
+
+.socio-social .social-icon {
+    color: #003d7a;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.socio-social .social-icon:hover {
+    color: #d4af37;
+}
+
+/* Áreas de Atuação */
         .areas {
             background-color: #f9f9f9;
         }
@@ -588,7 +659,47 @@
     </section>
 
     <div class="container">
-        <section id="sobre" class="about">
+        <section id="about" class="about">
+
+<!-- Seção Sobre os Sócios -->
+<section id="socios" class="socios">
+    <div class="container">
+        <h2>Sobre os Sócios</h2>
+        <p>Conheça a equipe de liderança do nosso escritório.</p>
+        <div class="socios-grid">
+            <!-- Sócio 1: Luiz Felipe -->
+            <div class="socio-card">
+                <img src="luiz-felipe.png" alt="Dr. Luiz Felipe de Oliveira Mattos" class="socio-img">
+                <div class="socio-info">
+                    <h3>Dr. Luiz Felipe de Oliveira Mattos</h3>
+                    <p class="socio-title">Sócio Fundador</p>
+                    <p class="socio-especialidades">Especialista em Direito Digital, LGPD e Direito Contratual</p>
+                    <div class="socio-bio">
+                        <p>Formado pela Universidade Presbiteriana Mackenzie (2009), com pós-graduação em Administração de Negócios pela mesma instituição e em Direito Eletrônico pela Escola Paulista de Direito. Foi Presidente da Comissão de Direito Digital da OAB/SP, Subseção de Santo Amaro (2014-2024), e é coautor do livro "Direito Digital e Proteção de Dados Pessoais". Atua como DPO (Encarregado de Proteção de Dados) nomeado pela OAB Santo Amaro.</p>
+                    </div>
+                    <div class="socio-social">
+                        <a href="https://www.linkedin.com/in/luiz-felipe-de-o-mattos-67354423/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sócio 2: Carolina Moraes -->
+            <div class="socio-card">
+                <img src="carolina-moraes.png" alt="Dra. Carolina Moraes e Silva" class="socio-img">
+                <div class="socio-info">
+                    <h3>Dra. Carolina Moraes e Silva</h3>
+                    <p class="socio-title">Sócia</p>
+                    <p class="socio-especialidades">[Áreas de especialização da Dra. Carolina]</p>
+                    <div class="socio-bio">
+                        <p>[Breve currículo da Dra. Carolina Moraes e Silva será inserido aqui quando disponível.]</p>
+                    </div>
+                    <div class="socio-social">
+                        <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
             <h2>Sobre o Escritório</h2>
             <p>Conheça nossa história e compromisso com a advocacia de alta performance.</p>
             <div class="about-content">
