@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.oliveiramattos.adv.br/sitemap.xml
