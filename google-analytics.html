@@ -1,0 +1,61 @@
+<!-- Google Analytics 4 -->
+<!-- INSTRUÇÕES DE IMPLEMENTAÇÃO:
+1. Substitua 'G-XXXXXXXXXX' pelo seu ID de propriedade do Google Analytics 4
+2. Para obter seu ID:
+   - Acesse https://analytics.google.com
+   - Crie uma nova propriedade ou use uma existente
+   - Vá para Administração > Propriedade > IDs de rastreamento
+   - Copie o ID de medição (formato: G-XXXXXXXXXX)
+3. Cole o script abaixo no <head> do seu HTML, logo após as meta tags
+4. Teste com Google Analytics Debugger (extensão do Chrome)
+-->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+  
+  // Rastreamento de eventos personalizados
+  
+  // Evento: Clique em CTA "Falar com um Especialista"
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('click', function() {
+      gtag('event', 'cta_click', {
+        'event_category': 'engagement',
+        'event_label': this.textContent.trim()
+      });
+    });
+  });
+  
+  // Evento: Envio de formulário
+  document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function() {
+      gtag('event', 'form_submit', {
+        'event_category': 'conversion',
+        'event_label': 'contact_form'
+      });
+    });
+  });
+  
+  // Evento: Clique em links de redes sociais
+  document.querySelectorAll('.social-icon').forEach(link => {
+    link.addEventListener('click', function() {
+      gtag('event', 'social_click', {
+        'event_category': 'engagement',
+        'event_label': this.title || 'social_link'
+      });
+    });
+  });
+  
+  // Evento: Clique em WhatsApp
+  document.querySelectorAll('.whatsapp-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        'event_category': 'engagement',
+        'event_label': 'whatsapp_contact'
+      });
+    });
+  });
+</script>

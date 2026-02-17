@@ -1,0 +1,141 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.oliveiramattos.adv.br/#organization",
+      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "alternateName": "OMMS Advogados",
+      "description": "Escritório de advocacia especializado em Direito Civil, Direito Digital e LGPD. Atendimento personalizado em São Paulo e todo o Brasil.",
+      "url": "https://www.oliveiramattos.adv.br",
+      "telephone": "+5511991178763",
+      "email": "contato@oliveiramattos.adv.br",
+      "image": "https://www.oliveiramattos.adv.br/logo-social.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.oliveiramattos.adv.br/logo-social.png",
+        "width": 200,
+        "height": 200
+      },
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua George Ohm, nº 206 - Torre B - 10º andar - Conj. 101-B",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "04576-020",
+          "addressCountry": "BR"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Avenida Domingos Garro, nº 149, Centro",
+          "addressLocality": "Dois Córregos",
+          "addressRegion": "SP",
+          "postalCode": "17300-067",
+          "addressCountry": "BR"
+        }
+      ],
+      "areaServed": "BR",
+      "priceRange": "$$",
+      "foundingDate": "2015",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://www.oliveiramattos.adv.br/#luiz-felipe"
+      },
+      "sameAs": [
+        "https://www.instagram.com/omms_advogados/",
+        "https://www.facebook.com/profile.php?id=61587766817718",
+        "https://www.linkedin.com/in/luiz-felipe-de-o-mattos-67354423/"
+      ],
+      "hasMap": "https://maps.google.com/?q=Rua+George+Ohm+206+São+Paulo+SP",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.oliveiramattos.adv.br/#luiz-felipe",
+      "name": "Dr. Luiz Felipe de Oliveira Mattos",
+      "jobTitle": "Sócio Fundador",
+      "description": "Especialista em Direito Digital, LGPD e Direito Contratual",
+      "url": "https://www.oliveiramattos.adv.br/#socios",
+      "image": "https://www.oliveiramattos.adv.br/luiz-felipe.webp",
+      "sameAs": "https://www.linkedin.com/in/luiz-felipe-de-o-mattos-67354423/",
+      "worksFor": {
+        "@id": "https://www.oliveiramattos.adv.br/#organization"
+      },
+      "knowsAbout": [
+        "Direito Digital",
+        "LGPD",
+        "Proteção de Dados",
+        "Direito Contratual",
+        "Direito Empresarial"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.oliveiramattos.adv.br/#carolina",
+      "name": "Dra. Carolina Moraes e Silva",
+      "jobTitle": "Sócia",
+      "url": "https://www.oliveiramattos.adv.br/#socios",
+      "image": "https://www.oliveiramattos.adv.br/carolina-moraes.webp",
+      "worksFor": {
+        "@id": "https://www.oliveiramattos.adv.br/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.oliveiramattos.adv.br/#direito-digital",
+      "name": "Direito Digital",
+      "description": "Consultoria em crimes cibernéticos, contratos eletrônicos, responsabilidade civil na internet e propriedade intelectual digital.",
+      "provider": {
+        "@id": "https://www.oliveiramattos.adv.br/#organization"
+      },
+      "areaServed": "BR",
+      "serviceType": "Consultoria Jurídica"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.oliveiramattos.adv.br/#lgpd",
+      "name": "LGPD e Privacidade",
+      "description": "Implementação completa da Lei Geral de Proteção de Dados, auditorias de privacidade e treinamento para empresas.",
+      "provider": {
+        "@id": "https://www.oliveiramattos.adv.br/#organization"
+      },
+      "areaServed": "BR",
+      "serviceType": "Consultoria Jurídica"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.oliveiramattos.adv.br/#direito-civil",
+      "name": "Direito Civil",
+      "description": "Contratos, responsabilidade civil, direito de família, sucessões e questões possessórias com foco estratégico.",
+      "provider": {
+        "@id": "https://www.oliveiramattos.adv.br/#organization"
+      },
+      "areaServed": "BR",
+      "serviceType": "Consultoria Jurídica"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.oliveiramattos.adv.br/#webpage",
+      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "description": "Escritório de advocacia especializado em Direito Civil, Direito Digital e LGPD",
+      "url": "https://www.oliveiramattos.adv.br",
+      "isPartOf": {
+        "@id": "https://www.oliveiramattos.adv.br/#website"
+      },
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.oliveiramattos.adv.br/#website",
+      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "url": "https://www.oliveiramattos.adv.br",
+      "inLanguage": "pt-BR"
+    }
+  ]
+}
