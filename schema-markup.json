@@ -4,7 +4,7 @@
     {
       "@type": "LocalBusiness",
       "@id": "https://www.oliveiramattos.adv.br/#organization",
-      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "name": "Oliveira Mattos & Moraes e Silva Advogados Associados",
       "alternateName": "OMMS Advogados",
       "description": "Consultoria Jurídica Estratégica: Expertise Humana + Inteligência Artificial Especializada. Atuação em Direito Digital, LGPD, Empresarial, Familiar, Sucessório, Tributário, Trabalhista e Penal.",
       "url": "https://www.oliveiramattos.adv.br",
@@ -205,7 +205,7 @@
     {
       "@type": "WebPage",
       "@id": "https://www.oliveiramattos.adv.br/#webpage",
-      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "name": "Oliveira Mattos & Moraes e Silva Advogados Associados",
       "description": "Consultoria Jurídica Estratégica com Inteligência Artificial Especializada",
       "url": "https://www.oliveiramattos.adv.br",
       "isPartOf": {
@@ -216,7 +216,7 @@
     {
       "@type": "WebSite",
       "@id": "https://www.oliveiramattos.adv.br/#website",
-      "name": "Oliveira Mattos e Moraes e Silva Advogados Associados",
+      "name": "Oliveira Mattos & Moraes e Silva Advogados Associados",
       "url": "https://www.oliveiramattos.adv.br",
       "inLanguage": "pt-BR",
       "potentialAction": {
