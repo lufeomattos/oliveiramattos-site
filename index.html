@@ -246,6 +246,75 @@
             flex-wrap: wrap;
         }
 
+        /* Bloco de destaque do nome do escritório */
+        .escritorio-destaque {
+            background-color: #f8f5ef;
+            text-align: center;
+            padding: 60px 20px 50px;
+        }
+
+        .escritorio-destaque .nome-principal {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a2e5a;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 4px;
+        }
+
+        .escritorio-destaque .nome-subtitulo {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #b8963e;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .escritorio-destaque .linha-dourada {
+            display: block;
+            width: 180px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, #b8963e 30%, #d4af37 60%, transparent 100%);
+            margin: 0 auto 28px;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .escritorio-destaque .linha-dourada::before {
+            content: '';
+            display: block;
+            width: 280px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, #b8963e 40%, transparent 100%);
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .escritorio-destaque .tagline-anos {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a2e5a;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .escritorio-destaque .nome-principal {
+                font-size: 28px;
+                letter-spacing: 1px;
+            }
+            .escritorio-destaque .tagline-anos {
+                font-size: 16px;
+            }
+        }
+
         .btn {
             padding: 14px 30px;
             font-size: 16px;
@@ -829,6 +898,14 @@
             </div>
         </div>
     </section>
+
+    <div class="escritorio-destaque">
+        <div class="nome-principal">Oliveira Mattos</div>
+        <div class="nome-principal">&amp; Moraes e Silva</div>
+        <div class="nome-subtitulo">Advogados Associados</div>
+        <span class="linha-dourada"></span>
+        <div class="tagline-anos">Excelência jurídica desde 2015</div>
+    </div>
 
     <div class="container">
         <section id="sobre-nos" class="about">
