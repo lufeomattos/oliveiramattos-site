@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Básico -->
+    <title>Blog | Oliveira Mattos & Moraes e Silva Advogados - Consultoria Jurídica Estratégica</title>
+    <meta name="description" content="Blog de Direito Digital, LGPD, Direito Empresarial, Tributário e mais. Artigos e análises jurídicas estratégicas para empresas e patrimônio.">
+    <meta name="keywords" content="blog direito, artigos jurídicos, direito digital, LGPD, direito empresarial, consultoria jurídica">
+    <meta name="author" content="Dr. Luiz Felipe de Oliveira Mattos">
+    <link rel="canonical" href="https://www.oliveiramattos.adv.br/blog.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.oliveiramattos.adv.br/blog.html">
+    <meta property="og:title" content="Blog | Oliveira Mattos & Moraes e Silva Advogados">
+    <meta property="og:description" content="Artigos e análises jurídicas estratégicas sobre Direito Digital, LGPD, Direito Empresarial e mais.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog Oliveira Mattos & Moraes e Silva Advogados",
+      "url": "https://www.oliveiramattos.adv.br/blog.html",
+      "description": "Blog de Direito Digital, LGPD, Direito Empresarial, Tributário e mais",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Oliveira Mattos & Moraes e Silva Advogados Associados",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.oliveiramattos.adv.br/logo-social.png"
+        }
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5aa0 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .blog-card-header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1a3a52 100%);
+            color: white;
+            padding: 1.5rem;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blog-card-category {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .blog-card h3 {
+            font-size: 1.3rem;
+            line-height: 1.4;
+        }
+
+        .blog-card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card-excerpt {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 1rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        .blog-card-link {
+            display: inline-block;
+            background: #2c5aa0;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .blog-card-link:hover {
+            background: #1a3a52;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.7rem 1.5rem;
+            background: #2c5aa0;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #1a3a52;
+        }
+
+        footer {
+            background: #1a3a52;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog Jurídico</h1>
+        <p>Análises estratégicas sobre Direito Digital, LGPD, Direito Empresarial e mais</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+
+        <div class="blog-grid">
+            <!-- Artigo 1: Crimes Cibernéticos -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito Digital</span>
+                    <h3>Crimes Cibernéticos: Como Proteger Sua Empresa em 2026</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Guia completo sobre tipos de crimes cibernéticos, responsabilidades legais das empresas e medidas práticas de proteção que você pode implementar hoje.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 25 de Março de 2026</span>
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                    </div>
+                    <a href="blog/crimes-ciberneticos.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 2: LGPD para Pequenas Empresas -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">LGPD</span>
+                    <h3>LGPD para Pequenas Empresas: Guia Prático e Acessível</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">O que é LGPD, quem precisa cumprir, multas por não conformidade e os primeiros passos para adequar sua empresa à Lei Geral de Proteção de Dados.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 01 de Abril de 2026</span>
+                        <span><i class="fas fa-clock"></i> 7 min</span>
+                    </div>
+                    <a href="blog/lgpd-para-pmes.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 3: Estruturação de Startups -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito Empresarial</span>
+                    <h3>Estruturação Societária para Startups: Qual Forma Jurídica Escolher?</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Comparação entre MEI, EIRELI, Sociedade Limitada e Sociedade Anônima. Entenda qual estrutura é ideal para sua startup atrair investimentos.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 10 de Abril de 2026</span>
+                        <span><i class="fas fa-clock"></i> 9 min</span>
+                    </div>
+                    <a href="blog/estruturacao-startups.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 4: Regimes Tributários -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito Tributário</span>
+                    <h3>Simples Nacional vs. Lucro Real: Qual Regime Escolher?</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Análise comparativa dos regimes tributários, quando usar cada um e como calcular a economia potencial para sua empresa.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 15 de Abril de 2026</span>
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                    </div>
+                    <a href="blog/regimes-tributarios.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 5: Planejamento Sucessório -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito de Família</span>
+                    <h3>Planejamento Sucessório: Proteja Seu Patrimônio Familiar</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Por que fazer planejamento, como funciona, benefícios fiscais e como as Holdings Familiares protegem o patrimônio entre gerações.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 22 de Abril de 2026</span>
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                    </div>
+                    <a href="blog/planejamento-sucessorio.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 6: Usucapião -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito Civil</span>
+                    <h3>Usucapião: Como Regularizar a Propriedade do Seu Imóvel</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Entenda o que é usucapião, quais são os requisitos para regularizar seu imóvel e como o processo extrajudicial em cartório tornou tudo mais rápido.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 29 de Abril de 2026</span>
+                        <span><i class="fas fa-clock"></i> 7 min</span>
+                    </div>
+                    <a href="blog/usucapiao-regularizacao.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 7: IA na Advocacia -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">IA & Consultoria</span>
+                    <h3>IA na Advocacia: Como a Inteligência Artificial Transforma a Consultoria Jurídica</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Descubra como a Inteligência Artificial está transformando a advocacia e por que o modelo híbrido (Advogado + IA) é o grande diferencial competitivo.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 06 de Maio de 2026</span>
+                        <span><i class="fas fa-clock"></i> 6 min</span>
+                    </div>
+                    <a href="blog/ia-na-advocacia.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+
+            <!-- Artigo 8: Conformidade CLT -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <span class="blog-card-category">Direito Trabalhista</span>
+                    <h3>Conformidade CLT: Checklist para Empresas Evitarem Ações Trabalhistas</h3>
+                </div>
+                <div class="blog-card-body">
+                    <p class="blog-card-excerpt">Checklist essencial de Conformidade Trabalhista para ajudar sua empresa a identificar riscos ocultos e evitar processos judiciais custosos.</p>
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> 13 de Maio de 2026</span>
+                        <span><i class="fas fa-clock"></i> 8 min</span>
+                    </div>
+                    <a href="blog/conformidade-clt.html" class="blog-card-link">Ler Artigo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Oliveira Mattos & Moraes e Silva Advogados Associados. Todos os direitos reservados.</p>
+        <p><small>Este site é informativo e não constitui aconselhamento jurídico. Para questões específicas, consulte um advogado especializado.</small></p>
+    </footer>
+</body>
+</html>
