@@ -539,6 +539,100 @@
             line-height: 1.8;
         }
 
+        /* Projetos institucionais */
+        .projetos-institucionais {
+            margin-top: 70px;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #08223b 0%, #0b3d5d 100%);
+            color: white;
+            box-shadow: 0 12px 30px rgba(0, 35, 70, 0.16);
+        }
+
+        .projeto-conteudo {
+            display: grid;
+            grid-template-columns: 1.35fr .65fr;
+            gap: 50px;
+            align-items: center;
+            padding: 58px 60px;
+        }
+
+        .projeto-selo {
+            display: inline-block;
+            margin-bottom: 18px;
+            color: #e5bd57;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .projetos-institucionais h2 {
+            max-width: 760px;
+            margin-bottom: 20px;
+            color: white;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 38px;
+            line-height: 1.18;
+        }
+
+        .projetos-institucionais p {
+            max-width: 760px;
+            margin-bottom: 28px;
+            color: rgba(255,255,255,.76);
+            font-size: 16px;
+            line-height: 1.75;
+            text-align: left;
+        }
+
+        .projeto-link {
+            display: inline-block;
+            padding: 14px 24px;
+            border: 1px solid #d4af37;
+            color: #f3cf70;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .25s ease;
+        }
+
+        .projeto-link:hover {
+            background: #d4af37;
+            color: #08223b;
+        }
+
+        .projeto-indicadores {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 1px solid rgba(255,255,255,.18);
+        }
+
+        .projeto-indicadores div {
+            padding: 28px 20px;
+            border-right: 1px solid rgba(255,255,255,.14);
+            text-align: center;
+        }
+
+        .projeto-indicadores div:last-child { border-right: 0; }
+
+        .projeto-indicadores strong {
+            display: block;
+            color: #f3cf70;
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 34px;
+            font-weight: 400;
+        }
+
+        .projeto-indicadores span {
+            display: block;
+            margin-top: 6px;
+            color: rgba(255,255,255,.58);
+            font-size: 10px;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
         /* Blog */
         .blog {
             background-color: white;
@@ -859,6 +953,15 @@
                 gap: 15px;
             }
 
+            .projeto-conteudo {
+                grid-template-columns: 1fr;
+                padding: 42px 28px;
+            }
+
+            .projetos-institucionais h2 {
+                font-size: 30px;
+            }
+
             .hero h1 {
                 font-size: 32px;
             }
@@ -888,6 +991,7 @@
                     <li><a href="#sobre-nos">Sobre Nós</a></li>
                     <li><a href="#socios">Nossos Sócios</a></li>
                     <li><a href="#areas">Áreas</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#na-midia">Na Mídia</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -1053,6 +1157,20 @@
                     <h3>Direito do Agronegócio</h3>
                     <p>Consultoria especializada em contratos rurais, regularização fundiária, arrendamento, parceria agrícola e questões ambientais do setor.</p>
                 </a>
+            </div>
+            <div id="projetos" class="projetos-institucionais">
+                <div class="projeto-conteudo">
+                    <div>
+                        <span class="projeto-selo">Projeto institucional em destaque</span>
+                        <h2>Programa Municipal de Proteção Digital Infantojuvenil</h2>
+                        <p>Arquitetura jurídica e institucional concebida para apoiar Municípios na prevenção de riscos digitais, na primeira resposta protetiva e na construção de evidências de implantação e melhoria contínua nas escolas públicas.</p>
+                        <a href="/programa-protecao-digital.html" class="projeto-link">Conhecer a iniciativa institucional &rarr;</a>
+                    </div>
+                    <div class="projeto-indicadores" aria-label="Estrutura do Programa">
+                        <div><strong>14</strong><span>anexos demonstrativos</span></div>
+                        <div><strong>37</strong><span>instrumentos estruturados</span></div>
+                    </div>
+                </div>
             </div>
             <!-- CTA Estratégico após Áreas de Atuação -->
             <div class="cta-section" style="text-align: center; margin-top: 60px; padding: 40px 20px; background: linear-gradient(135deg, #003d7a 0%, #005ba3 100%); border-radius: 10px;">

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Municipal de Proteção Digital Infantojuvenil | Oliveira Mattos</title>
+    <meta name="description" content="Programa institucional para apoiar Municípios na governança, prevenção e primeira resposta protetiva a riscos digitais nas escolas públicas.">
+    <meta name="author" content="Luiz Felipe de Oliveira Mattos">
+    <link rel="canonical" href="https://www.oliveiramattos.adv.br/programa-protecao-digital.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.oliveiramattos.adv.br/programa-protecao-digital.html">
+    <meta property="og:title" content="Programa Municipal de Proteção Digital Infantojuvenil">
+    <meta property="og:description" content="Governança, prevenção e capacidade institucional para a proteção digital de crianças e adolescentes nas escolas públicas.">
+    <style>
+        :root { --navy: #08223b; --blue: #0b3d5d; --gold: #d4af37; --gold-light: #f0d177; --paper: #f7f5ef; --ink: #17304a; }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.65; }
+        a { color: inherit; }
+        .topbar { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 22px max(5vw, 28px); background: var(--navy); color: white; }
+        .brand { text-decoration: none; }
+        .brand strong { display: block; font-family: Georgia, serif; font-size: 18px; letter-spacing: .4px; }
+        .brand span { display: block; margin-top: 2px; color: var(--gold-light); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; }
+        .back { color: rgba(255,255,255,.72); font-size: 13px; text-decoration: none; }
+        .back:hover { color: var(--gold-light); }
+        .hero { position: relative; overflow: hidden; padding: 105px max(7vw, 34px) 92px; background: radial-gradient(circle at 90% 10%, #205a78 0, transparent 34%), linear-gradient(130deg, #061a2d, #0b3553); color: white; }
+        .hero::after { content: ''; position: absolute; width: 500px; height: 500px; right: -180px; top: 30px; border: 1px solid rgba(240,209,119,.22); border-radius: 50%; }
+        .hero-content { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; }
+        .eyebrow { margin: 0 0 24px; color: var(--gold-light); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
+        h1 { max-width: 970px; margin: 0; font-size: clamp(48px, 6vw, 82px); line-height: 1; letter-spacing: -2px; }
+        .hero-lead { max-width: 760px; margin: 30px 0 0; color: rgba(255,255,255,.72); font-size: 19px; line-height: 1.7; }
+        .hero-actions { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 40px; }
+        .button { display: inline-block; padding: 15px 24px; border: 1px solid var(--gold); font-size: 13px; font-weight: 700; text-decoration: none; }
+        .button.primary { background: var(--gold); color: var(--navy); }
+        .button.secondary { color: var(--gold-light); }
+        .principle { max-width: 1120px; margin: -1px auto 0; padding: 32px max(7vw, 34px); border-left: 4px solid var(--gold); background: white; color: var(--navy); font-family: Georgia, serif; font-size: 23px; line-height: 1.5; }
+        main { max-width: 1120px; margin: 0 auto; padding: 100px 28px; }
+        .intro { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; align-items: start; }
+        h2 { margin: 0; color: var(--navy); font-size: clamp(38px, 4.7vw, 58px); line-height: 1.08; }
+        .intro-copy { border-top: 1px solid rgba(23,48,74,.2); }
+        .intro-copy p { margin: 22px 0 0; color: #536a80; font-size: 16px; }
+        .metrics { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 72px; border-top: 1px solid rgba(23,48,74,.2); border-bottom: 1px solid rgba(23,48,74,.2); }
+        .metrics div { padding: 28px; border-right: 1px solid rgba(23,48,74,.2); }
+        .metrics div:first-child { padding-left: 0; }
+        .metrics div:last-child { border-right: 0; }
+        .metrics strong { display: block; color: #a97e12; font-family: Georgia, serif; font-size: 38px; font-weight: 400; }
+        .metrics span { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; }
+        .architecture { margin-top: 100px; padding: 68px; background: var(--navy); color: white; }
+        .architecture h2 { max-width: 750px; color: white; }
+        .architecture > p { max-width: 760px; color: rgba(255,255,255,.63); }
+        .layers { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 52px; border-top: 1px solid rgba(255,255,255,.16); }
+        .layers article { padding: 26px 25px 26px 0; border-right: 1px solid rgba(255,255,255,.13); border-bottom: 1px solid rgba(255,255,255,.13); }
+        .layers article:nth-child(3n + 2), .layers article:nth-child(3n + 3) { padding-left: 25px; }
+        .layers article:nth-child(3n) { border-right: 0; }
+        .layers span { color: var(--gold-light); font-size: 11px; }
+        .layers h3 { margin: 12px 0 8px; font-size: 21px; }
+        .layers p { margin: 0; color: rgba(255,255,255,.55); font-size: 13px; }
+        .authorship { display: grid; grid-template-columns: .75fr 1.25fr; gap: 8vw; margin-top: 100px; padding-top: 70px; border-top: 1px solid rgba(23,48,74,.2); }
+        .authorship-label { color: #9a7210; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .authorship h2 { font-size: 44px; }
+        .authorship p { margin: 0 0 20px; color: #536a80; }
+        .cta { margin-top: 90px; padding: 58px; background: #e3b83f; color: var(--navy); text-align: center; }
+        .cta h2 { color: var(--navy); font-size: 42px; }
+        .cta p { max-width: 720px; margin: 18px auto 28px; }
+        .cta .button { border-color: var(--navy); background: var(--navy); color: white; }
+        footer { display: flex; justify-content: space-between; gap: 30px; padding: 34px max(5vw, 28px); background: #06192b; color: rgba(255,255,255,.55); font-size: 12px; }
+        footer a { color: var(--gold-light); text-decoration: none; }
+        @media (max-width: 760px) {
+            .topbar { align-items: flex-start; flex-direction: column; }
+            .hero { padding-top: 70px; }
+            .intro, .authorship { grid-template-columns: 1fr; gap: 34px; }
+            .metrics, .layers { grid-template-columns: 1fr; }
+            .metrics div, .metrics div:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid rgba(23,48,74,.2); }
+            .architecture { padding: 48px 26px; }
+            .layers article:nth-child(n) { padding: 24px 0; border-right: 0; }
+            .cta { padding: 44px 24px; }
+            footer { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <a href="/" class="brand"><strong>OLIVEIRA MATTOS &amp; MORAES E SILVA</strong><span>Advogados Associados</span></a>
+        <a href="/" class="back">&larr; Voltar ao site do escritório</a>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Projeto institucional · Direito Digital · Políticas públicas</p>
+            <h1>Programa Municipal de Proteção Digital Infantojuvenil</h1>
+            <p class="hero-lead">Uma arquitetura jurídica e institucional para transformar riscos digitais em governança, prevenção, primeira resposta protetiva e melhoria contínua nas escolas públicas.</p>
+            <div class="hero-actions">
+                <a class="button primary" href="https://protecao-digital-infantojuvenil.lufeomattos.chatgpt.site">Acessar o site completo do Programa &rarr;</a>
+                <a class="button secondary" href="#desenvolvimento">Conhecer a idealização técnica</a>
+            </div>
+        </div>
+    </section>
+    <blockquote class="principle">“O Município não controla todos os riscos da internet; controla a qualidade da sua resposta institucional.”</blockquote>
+    <main>
+        <section class="intro">
+            <h2>Da resposta isolada à capacidade institucional.</h2>
+            <div class="intro-copy">
+                <p>Cyberbullying, exposição de imagens, perfis falsos, deepfakes, aliciamento, fraudes e uso indevido de inteligência artificial já integram a realidade escolar.</p>
+                <p>O Programa organiza responsabilidades, fluxos e evidências para que cada escola saiba prevenir, acolher, registrar, preservar e encaminhar, sem investigar aquilo que não lhe compete.</p>
+            </div>
+        </section>
+        <div class="metrics" aria-label="Estrutura do Programa">
+            <div><strong>14</strong><span>anexos demonstrativos</span></div>
+            <div><strong>37</strong><span>instrumentos estruturados</span></div>
+            <div><strong>01</strong><span>sistema municipal integrado</span></div>
+        </div>
+        <section class="architecture">
+            <h2>Uma solução sistêmica — não um documento de gaveta.</h2>
+            <p>A estrutura conecta prevenção, atuação escolar, proteção de dados, rede de proteção e evidências de efetividade em um ciclo coerente.</p>
+            <div class="layers">
+                <article><span>01</span><h3>Fundamentos e governança</h3><p>Base normativa, princípios, papéis e instâncias decisórias.</p></article>
+                <article><span>02</span><h3>Mapeamento de riscos</h3><p>Vulnerabilidades, controles e prioridades institucionais.</p></article>
+                <article><span>03</span><h3>Prevenção e formação</h3><p>Condutas, capacitação, famílias e cidadania digital.</p></article>
+                <article><span>04</span><h3>Primeira resposta</h3><p>Acolhimento, registro, preservação e encaminhamento.</p></article>
+                <article><span>05</span><h3>Dados, IA e fornecedores</h3><p>Privacidade, segurança e avaliação de tecnologias.</p></article>
+                <article><span>06</span><h3>Monitoramento e melhoria</h3><p>Indicadores, auditoria, ações corretivas e aprendizado.</p></article>
+            </div>
+        </section>
+        <section class="authorship" id="desenvolvimento">
+            <div><span class="authorship-label">Idealização e desenvolvimento técnico</span></div>
+            <div>
+                <h2>Experiência jurídica aplicada à proteção digital infantojuvenil.</h2>
+                <p>O Programa foi idealizado e desenvolvido tecnicamente por <strong>Luiz Felipe de Oliveira Mattos</strong> e pelo <strong>Oliveira Mattos &amp; Moraes e Silva Advogados Associados</strong>, a partir da articulação entre Direito Digital, proteção de dados pessoais, direitos da criança e do adolescente e políticas públicas.</p>
+                <p>A iniciativa combina fundamentos jurídicos, governança, instrumentos demonstrativos e metodologia de implantação voltada à realidade municipal.</p>
+            </div>
+        </section>
+        <section class="cta">
+            <h2>Conheça a arquitetura completa.</h2>
+            <p>Explore objetivos, benefícios, estrutura, perguntas frequentes e o roteiro de demonstração técnica do Programa.</p>
+            <a class="button" href="https://protecao-digital-infantojuvenil.lufeomattos.chatgpt.site">Visitar o site do Programa &rarr;</a>
+        </section>
+    </main>
+    <footer>
+        <span>&copy; 2026 Oliveira Mattos &amp; Moraes e Silva Advogados Associados.</span>
+        <a href="mailto:luiz.mattos@oliveiramattos.adv.br">luiz.mattos@oliveiramattos.adv.br</a>
+    </footer>
+</body>
+</html>
