@@ -987,6 +987,8 @@
                 gap: 30px;
             }
         }
+            .campo-oculto { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+        .form-status { margin-top: 12px; min-height: 1.4em; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -1338,7 +1340,14 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/xwvwebwk" method="POST">
+                    <form id="form-contato" action="https://zljqaaaedgqboruwpqmf.supabase.co/functions/v1/entrada-site" method="POST">
+                        <input type="hidden" name="versao_aviso" value="form-2026-10-21">
+                        <input type="hidden" name="carregado_em" value="">
+                        <input type="hidden" name="id" value="">
+                        <div class="campo-oculto" aria-hidden="true">
+                            <label for="website">Deixe este campo em branco</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
                         <div class="form-group">
                             <label for="name">Nome Completo</label>
                             <input type="text" id="name" name="nome" placeholder="Seu nome" required>
@@ -1357,13 +1366,61 @@
                         </div>
                         <p class="form-privacy-notice">
                             Usaremos seu nome, e-mail e mensagem apenas para responder a esta solicitação.
-                            O envio é processado pelo Formspree, serviço sediado nos Estados Unidos.
+                            A mensagem é registrada no sistema interno do escritório, com armazenamento em servidores em São Paulo.
                             Por favor, não inclua dados de saúde ou detalhes sensíveis do caso nesta mensagem:
                             eles serão tratados na conversa com o advogado.
                             Saiba mais na <a href="/privacidade.html">Política de Privacidade</a>.
                         </p>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem</button>
+                        <p class="form-status" role="status" aria-live="polite"></p>
                     </form>
+                    <script>
+                    (function () {
+                        var form = document.getElementById('form-contato');
+                        if (!form || !window.fetch) return;
+                        var status = form.querySelector('.form-status');
+                        var botao = form.querySelector('button[type="submit"]');
+                        var novoId = function () {
+                            return (window.crypto && crypto.randomUUID) ? crypto.randomUUID()
+                                : 'id-' + Date.now().toString(36) + '-' + Math.random().toString(36).slice(2, 10);
+                        };
+                        form.elements.carregado_em.value = String(Date.now());
+                        form.elements.id.value = novoId();
+                        if (/[?&]enviado=1/.test(location.search)) {
+                            status.textContent = 'Mensagem recebida. Responderemos pelo e-mail informado.';
+                        }
+                        form.addEventListener('submit', function (ev) {
+                            ev.preventDefault();
+                            var dados = {};
+                            new FormData(form).forEach(function (v, k) { dados[k] = v; });
+                            botao.disabled = true;
+                            status.textContent = 'Enviando...';
+                            fetch(form.action, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                                body: JSON.stringify(dados)
+                            }).then(function (r) {
+                                return r.json().catch(function () { return {}; }).then(function (j) { return { r: r, j: j }; });
+                            }).then(function (x) {
+                                if (x.r.ok) {
+                                    form.reset();
+                                    form.elements.carregado_em.value = String(Date.now());
+                                    form.elements.id.value = novoId();
+                                    status.textContent = 'Mensagem recebida. Responderemos pelo e-mail informado.';
+                                } else if (x.r.status === 400) {
+                                    var nomes = { nome: 'o nome', email: 'o e-mail', assunto: 'o assunto', mensagem: 'a mensagem' };
+                                    status.textContent = 'Confira ' + (nomes[x.j.campo] || 'os campos') + ' e tente de novo.';
+                                } else if (x.r.status === 429) {
+                                    status.textContent = 'Recebemos várias mensagens deste e-mail na última hora. Tente mais tarde ou fale pelo WhatsApp.';
+                                } else {
+                                    status.textContent = 'Não foi possível enviar agora. Tente de novo ou fale pelo WhatsApp.';
+                                }
+                            }).catch(function () {
+                                status.textContent = 'Não foi possível enviar agora. Tente de novo ou fale pelo WhatsApp.';
+                            }).then(function () { botao.disabled = false; });
+                        });
+                    })();
+                    </script>
                 </div>
             </div>
         </section>
