@@ -237,9 +237,17 @@
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             .nav-menu {
-                gap: 15px;
+                gap: 8px 15px;
                 font-size: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
             }
 
             .legal-page h1 {
@@ -408,8 +416,66 @@
                 <li>Backups regulares</li>
             </ul>
 
-            <h2>8. RETENÇÃO DE DADOS</h2>
-            <p>Manteremos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades para as quais foram coletados, ou para cumprir com obrigações legais.</p>
+            <h2 id="retencao">8. RETENÇÃO DE DADOS</h2>
+            <p>Guardamos seus dados pessoais apenas pelo tempo necessário para cada finalidade. Os prazos abaixo contam a partir do evento indicado. Ao fim de cada prazo, os dados são eliminados ou anonimizados, isto é, transformados de modo que não seja mais possível identificar você.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Situação</th>
+                        <th>Por quanto tempo</th>
+                        <th>Fundamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Contato que não resultou em contratação:</strong> conteúdo das mensagens, telefone e e-mail</td>
+                        <td>12 meses após o encerramento do atendimento</td>
+                        <td>Procedimentos preliminares a pedido do titular (LGPD, art. 7º, V)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Registro mínimo desse contato:</strong> nome, data, canal, assunto e indicação de que o contato partiu de você</td>
+                        <td>5 anos após o encerramento do atendimento; depois, anonimizado</td>
+                        <td>Exercício regular de direitos (LGPD, art. 7º, VI), considerando o prazo de prescrição disciplinar (Lei 8.906/1994, art. 43)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Verificação de conflito de interesses</strong> de quem não contratou</td>
+                        <td>5 anos após o encerramento do atendimento; depois, anonimizada. Pode ser mantida por mais tempo quando envolver informação protegida pelo sigilo profissional</td>
+                        <td>Exercício regular de direitos (LGPD, art. 7º, VI)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clientes:</strong> contrato, procuração e prestação de contas</td>
+                        <td>10 anos após o fim do mandato ou do contrato</td>
+                        <td>Código Civil, art. 205; Lei 8.906/1994, art. 25-A</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clientes:</strong> demais dados</td>
+                        <td>5 anos após o fim do mandato ou do contrato</td>
+                        <td>Código Civil, art. 206, § 5º, II; Lei 8.906/1994, art. 25</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Boletim informativo:</strong> nome e e-mail de quem se inscreveu</td>
+                        <td>Enquanto durar a inscrição. Se você não abrir nenhum boletim por 24 meses, pediremos que confirme o interesse; sem confirmação, sua inscrição é cancelada</td>
+                        <td>Consentimento (LGPD, art. 7º, I)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prova do consentimento e do cancelamento</strong> do boletim</td>
+                        <td>5 anos após o cancelamento</td>
+                        <td>LGPD, art. 8º, § 2º, e art. 7º, VI</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pedidos de titulares</strong> (acesso, correção, eliminação etc.) e nossas respostas</td>
+                        <td>5 anos após a resposta</td>
+                        <td>Exercício regular de direitos (LGPD, art. 7º, VI)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dados de navegação</strong> do Google Analytics, se você aceitar os cookies de estatística</td>
+                        <td>Pelo prazo de retenção configurado no Google Analytics, de no máximo 14 meses</td>
+                        <td>Consentimento (LGPD, art. 7º, I)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Quando você cancela a inscrição no boletim, apagamos seu e-mail e guardamos apenas um código gerado a partir dele, que não permite recuperá-lo, para garantir que você não volte a receber o boletim. Esse código é apagado se você se inscrever novamente.</p>
+            <p>Se houver processo judicial, administrativo ou disciplinar, em curso ou previsível, relacionado aos dados, eles são mantidos até o encerramento, para o exercício regular de direitos (LGPD, art. 7º, VI). Fora dessas hipóteses e daquelas do art. 16 da LGPD, você pode pedir a eliminação antecipada pelo contato indicado na seção 10.</p>
 
             <h2 id="cookies">9. COOKIES</h2>
             <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo. Este site usa apenas cookies de estatística do Google Analytics (<code>_ga</code> e <code>_ga_*</code>), e somente depois que você clica em "Aceitar" no aviso de cookies. Se você recusar ou não responder, o Google Analytics não é carregado e nenhum dado de navegação é enviado ao Google.</p>
