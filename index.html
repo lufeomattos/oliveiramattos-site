@@ -989,6 +989,7 @@
         }
             .campo-oculto { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
         .form-status { margin-top: 12px; min-height: 1.4em; font-size: 14px; }
+            .cf-turnstile { margin: 4px 0 12px; }
     </style>
 </head>
 <body>
@@ -1366,14 +1367,16 @@
                         </div>
                         <p class="form-privacy-notice">
                             Usaremos seu nome, e-mail e mensagem apenas para responder a esta solicitação.
-                            A mensagem é registrada no sistema interno do escritório, com armazenamento em servidores em São Paulo, e uma cópia vai para o e-mail do escritório (Microsoft 365).
+                            A mensagem é registrada no sistema interno do escritório, com armazenamento em servidores em São Paulo, e uma cópia vai para o e-mail do escritório (Microsoft 365). Para proteger o formulário contra robôs, usamos a verificação de segurança Cloudflare Turnstile.
                             Por favor, não inclua dados de saúde ou detalhes sensíveis do caso nesta mensagem:
                             eles serão tratados na conversa com o advogado.
                             Saiba mais na <a href="/privacidade.html">Política de Privacidade</a>.
                         </p>
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFhl4tbpXZQNAOQQ" data-language="pt-br" data-theme="light" data-size="flexible"></div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar mensagem</button>
                         <p class="form-status" role="status" aria-live="polite"></p>
                     </form>
+                    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
                     <script>
                     (function () {
                         var form = document.getElementById('form-contato');
@@ -1407,6 +1410,8 @@
                                     form.elements.carregado_em.value = String(Date.now());
                                     form.elements.id.value = novoId();
                                     status.textContent = 'Mensagem recebida. Responderemos pelo e-mail informado.';
+                                } else if (x.r.status === 400 && x.j.erro === 'verificacao') {
+                                    status.textContent = 'Conclua a verificação de segurança logo acima do botão e envie de novo.';
                                 } else if (x.r.status === 400) {
                                     var nomes = { nome: 'o nome', email: 'o e-mail', assunto: 'o assunto', mensagem: 'a mensagem' };
                                     status.textContent = 'Confira ' + (nomes[x.j.campo] || 'os campos') + ' e tente de novo.';
@@ -1417,7 +1422,10 @@
                                 }
                             }).catch(function () {
                                 status.textContent = 'Não foi possível enviar agora. Tente de novo ou fale pelo WhatsApp.';
-                            }).then(function () { botao.disabled = false; });
+                            }).then(function () {
+                                botao.disabled = false;
+                                if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+                            });
                         });
                     })();
                     </script>
