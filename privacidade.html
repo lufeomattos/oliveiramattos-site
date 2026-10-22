@@ -378,6 +378,7 @@
                     <ul>
                         <li><strong>Supabase</strong>, que hospeda o sistema interno do escritório, onde são registradas as mensagens do formulário de contato, com armazenamento em servidores em São Paulo;</li>
                         <li><strong>Microsoft (Microsoft 365)</strong>, provedora do e-mail do escritório, que recebe uma cópia das mensagens do formulário de contato e as conversas por e-mail;</li>
+                        <li><strong>Cloudflare (Turnstile)</strong>, que faz a verificação de segurança do formulário de contato para distinguir pessoas de robôs, a partir de sinais técnicos do navegador, como o endereço IP e o tipo de navegador. A Cloudflare também usa esses sinais, como controladora, para aprimorar a detecção de robôs, conforme a <a href="https://www.cloudflare.com/turnstile-privacy-policy/" target="_blank" rel="noopener">política de privacidade do Turnstile</a>;</li>
                         <li><strong>GitHub (GitHub Pages)</strong>, que hospeda este site e registra dados técnicos de acesso, como o endereço IP;</li>
                         <li><strong>Google (Google Analytics)</strong>, somente se você aceitar os cookies de estatística.</li>
                     </ul>
@@ -387,9 +388,9 @@
             </ul>
 
             <h3>5.1. Transferência internacional de dados</h3>
-            <p>Os fornecedores acima são sediados nos Estados Unidos. O GitHub, o Google e a Microsoft podem tratar os dados fora do Brasil; o Supabase armazena os dados em São Paulo, mas, como empresa estrangeira, pode acessá-los a partir do exterior para manutenção e suporte. A transferência ocorre nas seguintes hipóteses da LGPD:</p>
+            <p>Os fornecedores acima são sediados nos Estados Unidos. O GitHub, o Google, a Microsoft e a Cloudflare podem tratar os dados fora do Brasil; o Supabase armazena os dados em São Paulo, mas, como empresa estrangeira, pode acessá-los a partir do exterior para manutenção e suporte. A transferência ocorre nas seguintes hipóteses da LGPD:</p>
             <ul>
-                <li><strong>Formulário de contato, sistema interno, e-mail e hospedagem:</strong> quando necessária para os procedimentos preliminares a contrato solicitados por você (art. 33, IX, combinado com o art. 7º, V);</li>
+                <li><strong>Formulário de contato, verificação de segurança do formulário, sistema interno, e-mail e hospedagem:</strong> quando necessária para os procedimentos preliminares a contrato solicitados por você (art. 33, IX, combinado com o art. 7º, V);</li>
                 <li><strong>Google Analytics:</strong> mediante seu consentimento específico e em destaque, colhido no aviso de cookies, que informa previamente o caráter internacional da operação (art. 33, VIII).</li>
             </ul>
 
@@ -480,6 +481,7 @@
 
             <h2 id="cookies">9. COOKIES</h2>
             <p>Cookies são pequenos arquivos de texto armazenados no seu dispositivo. Este site usa apenas cookies de estatística do Google Analytics (<code>_ga</code> e <code>_ga_*</code>), e somente depois que você clica em "Aceitar" no aviso de cookies. Se você recusar ou não responder, o Google Analytics não é carregado e nenhum dado de navegação é enviado ao Google.</p>
+            <p>Na página com o formulário de contato, a verificação de segurança Cloudflare Turnstile usa apenas recursos técnicos estritamente necessários para distinguir pessoas de robôs, sem finalidade de publicidade. Ela não depende do aviso de cookies, porque é necessária para o envio da mensagem.</p>
             <p>Sua escolha fica guardada no próprio navegador, para que o aviso não apareça a cada página. Você pode mudar de ideia a qualquer momento pelo link <a href="#" data-cookie-preferences>Preferências de cookies</a>, também disponível no rodapé de todas as páginas. Ao recusar depois de ter aceitado, os cookies do Google Analytics são apagados.</p>
             <p>Você também pode gerenciar ou apagar cookies pelas configurações do seu navegador:</p>
             <ul>
